@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Unpolish · Options</title>
+    <link rel="stylesheet" href="./options.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Unpolish</h1>
+      <p class="lede">Point the extension at the backend that rewrites your text.</p>
+      <form id="settings">
+        <label>
+          <span>Primary backend URL</span>
+          <input name="endpoint" type="url" placeholder="http://localhost:3939" required />
+          <small>Tried first. Usually your local server (free via Claude Max).</small>
+        </label>
+        <label>
+          <span>Fallback URL <em>(optional)</em></span>
+          <input name="fallbackEndpoint" type="url" placeholder="https://your-app.vercel.app" />
+          <small>Used only if the primary is unreachable. Usually your Vercel deploy. Leave blank to skip fallback.</small>
+        </label>
+        <label>
+          <span>Shared secret <em>(optional)</em></span>
+          <input name="secret" type="password" autocomplete="off" />
+          <small>Sent as <code>Authorization: Bearer …</code> to both endpoints. Leave blank if neither requires it.</small>
+        </label>
+        <label>
+          <span>Default mode</span>
+          <select name="defaultMode">
+            <option value="casual">Casual — teammates, Slack, quick replies</option>
+            <option value="professional">Professional — recruiters, hiring managers, customers</option>
+          </select>
+        </label>
+        <div class="row">
+          <button type="submit">Save</button>
+          <span id="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </main>
+    <script type="module" src="./options.ts"></script>
+  </body>
+</html>
