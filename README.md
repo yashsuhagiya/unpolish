@@ -4,6 +4,15 @@ A Chrome extension that rewrites the text you're typing, in a casual or professi
 
 The idea comes from Ben Horwitz's Sinceerly extension; this is my own implementation.
 
+<p>
+  <img src=".github/screenshots/panel.png" width="49%" alt="Unpolish preview panel under a message field, showing a casual rewrite as a word diff with Accept, Regenerate and Reject buttons">
+  <img src=".github/screenshots/panel-professional.png" width="49%" alt="The same preview panel switched to Professional, showing a more formal rewrite of the message">
+</p>
+<p>
+  <img src=".github/screenshots/options.png" width="49%" alt="Unpolish options page with a local primary backend URL, a Vercel fallback URL, a masked shared secret and the default mode">
+</p>
+<sub>Shown with a mock backend and sample text.</sub>
+
 ## How it works
 
 - A small floating U button appears on the field you're focused on.

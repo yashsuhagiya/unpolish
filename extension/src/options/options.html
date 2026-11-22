@@ -13,7 +13,7 @@
         <label>
           <span>Primary backend URL</span>
           <input name="endpoint" type="url" placeholder="http://localhost:3939" required />
-          <small>Tried first. Usually your local server (free via Claude Max).</small>
+          <small>Tried first. Usually your local server.</small>
         </label>
         <label>
           <span>Fallback URL <em>(optional)</em></span>
@@ -21,15 +21,15 @@
           <small>Used only if the primary is unreachable. Usually your Vercel deploy. Leave blank to skip fallback.</small>
         </label>
         <label>
-          <span>Shared secret <em>(optional)</em></span>
-          <input name="secret" type="password" autocomplete="off" />
-          <small>Sent as <code>Authorization: Bearer …</code> to both endpoints. Leave blank if neither requires it.</small>
+          <span>Shared secret</span>
+          <input name="secret" type="password" autocomplete="off" required />
+          <small>Sent as <code>Authorization: Bearer …</code> to both endpoints. Both backends require it.</small>
         </label>
         <label>
           <span>Default mode</span>
           <select name="defaultMode">
-            <option value="casual">Casual — teammates, Slack, quick replies</option>
-            <option value="professional">Professional — recruiters, hiring managers, customers</option>
+            <option value="casual">Casual: teammates, Slack, quick replies</option>
+            <option value="professional">Professional: recruiters, hiring managers, customers</option>
           </select>
         </label>
         <div class="row">
